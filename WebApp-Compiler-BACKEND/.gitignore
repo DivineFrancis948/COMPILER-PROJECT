@@ -1,0 +1,18 @@
+/.metadata/.*
+
+# Ignore all files with .log extension
+*.log
+
+# Ignore all files with .properties extension
+
+# /auth-service/src/main/resources/*.properties
+
+/jdoodle-service/logs/*
+
+/question-service/logs/*
+
+/student-service/logs/*
+
+/auth-service/logs/*
+
+
