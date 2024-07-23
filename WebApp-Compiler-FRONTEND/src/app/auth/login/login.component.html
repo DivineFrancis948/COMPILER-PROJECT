@@ -1,0 +1,30 @@
+<div class="container" id="main">
+    <div class="title">Login</div>
+    <div class="content">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Username</span>
+            <span class="error-msg-span"></span>
+            <input type="text" placeholder="Enter your name" [(ngModel)]="logindto.userName" name="fullname" id="fullname" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <span class="error-msg-span"></span>
+            <input type="text" placeholder="Enter your email" [(ngModel)]="logindto.email" name="email" id="email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <span class="error-msg-span"></span>
+            <input type="password" placeholder="Enter your Password" [(ngModel)]="logindto.password" name="phoneNumber" id="phoneNumber" required>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button class="button-login"  (click)="login()" id="q5">Login</button>
+            </div>
+            <br>
+            <div class="col">
+              <button class="button-signup" (click)="signup()" id="q5">SignUp</button>
+            </div>
+          </div>
+        </div>
+  </div>

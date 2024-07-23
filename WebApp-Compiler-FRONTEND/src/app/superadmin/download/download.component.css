@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.container
+{
+    margin-top:5%;
+    margin-left: 9%;
+}
+.order-card {
+    color: #fff;
+}
+
+.bg-c-blue {
+    background: linear-gradient(45deg, #1c6dc6, #356b9d);
+}
+
+.bg-c-green {
+    background: linear-gradient(45deg, #1a9a7e, #2d9d8b);
+}
+
+.bg-c-yellow {
+    background: linear-gradient(45deg, #c97d00, #ffaa4c);
+}
+
+.bg-c-pink {
+    background: linear-gradient(45deg, #c42233, #d4676e);
+}
+
+
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.card .card-block {
+    padding: 25px;
+}
+
+.order-card i {
+    font-size: 26px;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
+/* SEARCH BAR ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+    /* Style for the container div */
+    .file-input-container {
+        position: relative;
+        overflow: hidden;
+        width: 200px; /* Set the width as per your design */
+        height: 40px; /* Set the height as per your design */
+      }
+  
+      /* Style for the input element */
+      .file-input-container input[type="file"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+      }
+  
+      /* Style for the label text (optional) */
+      .file-input-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.1); /* Set the background color as per your design */
+        color: #fff; /* Set the text color as per your design */
+        font-size: 16px; /* Set the font size as per your design */
+      }
+
+      .fa-button {
+        display: inline-block;
+        padding: 10px;
+        background-color: transparent; /* Set the background color as per your design */
+        color: #ffffff; /* Set the text color as per your design */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+  
+      .fa-button:hover {
+        background-color: #2980b9; /* Set the hover background color as per your design */
+      }

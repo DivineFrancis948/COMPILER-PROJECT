@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+
+.container{
+  align-items: center;
+  margin-left: 9%;
+  margin-right: 10%;
+padding: 20px;
+  margin-top: 40px;
+  box-shadow: 4px 16px 32px whitesmoke; /* Adjust the color and other properties */
+  display: flex;
+}
+
+
+.table
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.round-button {
+  margin: 10px;
+  background-color: transparent;
+  border: transparent; 
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.round-button i {
+  color:#11101D; /* Icon color */
+}
+
+#downbutton{
+  color: #11101D;
+  padding: 5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.form-group{
+  border-radius: 5px;
+}
+
+.text{
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.btn{
+  background-color: transparent;
+  border-right: 2px #11101D;
+  margin-right: 10px;
+}
+
+.butttontext{
+  color: white;
+  margin-left: 8px;
+}
+#alligntable {
+  text-align: right;
+}
+
+#headings{
+  color: white;
+  margin-top: 10px;
+  background-color: #11101D; /* Adjust the gradient stops as needed */
+}

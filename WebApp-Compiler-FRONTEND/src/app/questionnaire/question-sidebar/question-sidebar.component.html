@@ -1,0 +1,70 @@
+
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- SIDE BAR STARTS HERE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div class="sidebar" [ngClass]="{'open': isSidebarOpen}">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+      <div class="logo_name">INTERLAND</div>
+      <i class='bx bx-menu' (click)="toggleSidebar()" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search'></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a (click)="goToDashboard()">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+     <li>
+       <a (click)="addQuestion()">
+         <i class='bx bx-plus'></i>
+         <span class="links_name">Add Question</span>
+       </a>
+       <span class="tooltip">Add Question</span>
+     </li>
+
+     <li>
+       <a (click)="codeBase()">
+         <i class='bx bx-desktop'></i>
+         <span class="links_name">Code Base</span>
+       </a>
+       <span class="tooltip">Code Base</span>
+     </li>
+     <li>
+       <a  (click)="downloadFile()">
+         <i class='bx bx-download'></i>
+         <span class="links_name">Download</span>
+       </a>
+       <span class="tooltip">Download</span>
+     </li>
+     <li>
+       <a (click)="uploadFile()">
+         <i class='bx bx-upload'></i>
+         <span class="links_name">Upload</span>
+       </a>
+       <span class="tooltip">Upload</span>
+     </li>
+     <li>
+        <a (click)="listQuestions()">
+          <i class='bx bx-question-mark'></i>
+          <span class="links_name">List Questions</span>
+        </a>
+        <span class="tooltip">Questions</span>
+      </li>
+
+     <li>
+        <a (click)="logOut()">
+          <i class='bx bx-log-out'></i>
+          <span class="links_name">Logout</span>
+        </a>
+        <span class="tooltip">Logout</span>
+      </li>
+    </ul>
+</div>
+<!-- SIDE BAR ENDS HERE ************************************************************************ -->

@@ -1,0 +1,51 @@
+<section class="content" id="id-enter">
+    <div class="col-md-12">
+        <div class="card ipsh-card">
+            <div class="card-header">
+                <h3 class="card-title"><i class="far fa-user mr-2 fa-icon-gradient-default"></i>MCQ Questions Upload</h3>
+                <div class="card-tools">
+                </div>
+            </div>
+            <!-- /.card-header -->
+      
+            <div class="card-body">
+                <form action="/" method="post" enctype="multipart/form-data" id="id_payroll_file_upload">
+                    <div class="row mt-1">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="filePath" class="ipsh-float-left">
+                                    <!-- {{ 'Choose Path'}} -->
+                                </label>
+                                <!-- <span
+                                    class="error-msg-span ipsh-float-right">{{validationMessage.filePath}}</span> -->
+                                <div class="custom-file">
+
+                                    <input type="file" name="file" class="custom-file-input" id="file"
+                                        aria-describedby="inputGroupFileAddon01" (change)="onFileSelected($event)">
+                                    <label class="custom-file-label originalFileLabel" for="file">
+                                        {{'Choose File' }}
+                                    </label>
+                                    <label class="custom-file-label tempFileLabel" for="file"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer clearfix">
+                <button type="button" class="btn action-btns action-btn float-right" (click)="upload()" style="margin-right: 30px;">
+                UPLOAD
+                </button>
+
+                <button type="button" class="btn action-btns  float-right" (click)="backToList()" style="margin-right: 30px;">
+                  LIST
+                </button>
+                <button type="button" class="btn action-btns  float-right" (click)="clear()" style="margin-right: 30px;">
+                    CLEAR
+                  </button>
+            </div>
+            <!-- /.card-footer-->
+        </div>
+    </div>
+</section>

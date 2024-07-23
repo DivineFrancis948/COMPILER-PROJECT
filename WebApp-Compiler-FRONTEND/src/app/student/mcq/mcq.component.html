@@ -1,0 +1,129 @@
+<app-header></app-header>
+<section>    
+    <div class="row">
+        <div class="col-md-8 mb-4" >
+            <div class="card" id="questionbox">
+                <div class="card-header">
+                        QUESTION - {{questionNumber}}
+                </div>
+                <div class="card-body">
+                    <p class="card-text" >{{questionToDisplay}}</p>
+    
+                        <label>
+                            <input type="radio" name="selectAnswer" value="{{mcqQuestions.option1}}" [(ngModel)]="selectedAnswer"> {{mcqQuestions.option1}}
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="selectAnswer" value="{{mcqQuestions.option2}}" [(ngModel)]="selectedAnswer"> {{mcqQuestions.option2}}
+                        </label>
+                        <br> 
+                        <label>
+                            <input type="radio" name="selectAnswer" value="{{mcqQuestions.option3}}" [(ngModel)]="selectedAnswer"> {{mcqQuestions.option3}}
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="genselectAnswerder" value="{{mcqQuestions.option4}}" [(ngModel)]="selectedAnswer"> {{mcqQuestions.option4}}
+                        </label>
+                        
+                  
+                  
+                </div>
+            </div>
+            <div class="col" id="buttonsbox">
+                <div class="card">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-info mr-2" (click)="previous()">PREVIOUS</button>
+                        <button type="button" class="btn btn-info mx-2" (click)="save()">SAVE FOR LATER</button>
+                        <button type="button" class="btn btn-info ml-2" (click)="next()" >NEXT</button>
+    
+    
+                            <button type="button" class="btn btn-success float-right" (click)="submit()">Submit</button>
+                    
+                        
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-3 mb-4" id="options">
+            <div class="card">
+                <div class="card-header">
+                    <div class="container">
+                      <div class="row mt-4 m">              
+                          <div class="col d-flex justify-content-between">
+                          <button type="button" class="rectangle-button-attended"  [ngClass]="'btn-dark'">
+                          <p>UNATTENDED {{black}}</p> 
+                          </button>
+                          <button type="button" class="rectangle-button-marked"  [ngClass]="'btn-success'">
+                            <p>REVIEW {{yellow}}</p>
+                          </button>
+                          <button type="button" class="rectangle-button-saved"  [ngClass]="'btn-warning'">
+                           <p>ATTENDED {{green}}</p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                <div class="card-body" id="optionsone">
+                      <div class="container">
+                        <ng-container *ngFor="let row of [1, 2, 3, 4, 5]; let rowIndex = index">
+                            <div class="row mt-3 m">
+                                <ng-container *ngFor="let button of [1, 2, 3]; let colIndex = index">
+                                    <div class="col-md-3 m">
+                                        <button type="button"
+                                            class="btn btn-circle mb-3"
+                                            [innerHTML]="button + rowIndex * 3"
+                                            (click)="getQuestion((rowIndex * 3) + colIndex +1)"
+                                            [ngClass]="{
+                                            'btn-dark': flags[rowIndex * 3 + colIndex] === 'U',
+                                            'btn-success': flags[rowIndex * 3 + colIndex] === 'A',
+                                            'btn-warning': flags[rowIndex * 3 + colIndex] === 'S'
+                                            }"
+                                            >
+                                        </button>
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </ng-container>
+                    </div>
+                    
+                    
+                    
+                    
+    
+                    <!-- <button type="submit" (click)="add()">Submit</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</section>
+
+<div class="modal fade" data-backdrop="static" id="submit-user-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">DO YOU WANT TO SUBMIT</h1>
+                <button type="button" class="close" data-dismiss="modal"  aria-label="Close" (click)="cancelSubmit()" >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h2> On Click Yes Your Mcq Exam Ends Here</h2>
+                <p class="text-black">UnAnswered - {{unanswered}}</p>
+                <p class="text-green"> Attended - {{answered}}
+                <p class="text-yellow">Saved For Later - {{saved}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary action-btn float-right" data-dismiss="modal"
+                    (click)="cancelSubmit()">NO</button>
+                <button type="button" class="btn btn-primary action-btn float-right"
+                    (click)="confirmSubmit()">YES</button>
+            </div>
+        </div>
+    </div>
+</div>

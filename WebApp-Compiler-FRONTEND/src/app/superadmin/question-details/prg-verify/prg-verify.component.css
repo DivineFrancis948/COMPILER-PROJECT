@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
+body {
+  font-family: "Source Sans Pro";
+  color: #333333;
+  padding-top: 50px;
+}
+
+details {
+  position: relative;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41OSAxNi4zNGw0LjU4LTQuNTktNC41OC00LjU5TDEwIDUuNzVsNiA2LTYgNnoiLz48L3N2Zz4=")
+    no-repeat 50% 50% / 1em 1em;
+  width: 1.5em;
+  height: 1.5em;
+  transition: transform 0.1s linear;
+}
+
+summary {
+  width: 100%;
+  padding: 20px;
+  padding-left: 25px;
+  border-bottom: 1px solid #ccc;
+}
+
+summary:hover {
+  color: #007bff;
+}
+
+summary:focus {
+  outline: none;
+}
+
+details[open] summary:before {
+  transform: rotate(90deg);
+}
+
+details[open] > summary {
+  color: #007bff;
+}
+
+details[open] > summary ~ * {
+  animation: open 1s ease;
+}
+
+p.source {
+  padding-top: 50px;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+/* component.css */
+
+body {
+    line-height: 1.5;
+  }
+  
+  .container {
+    padding: 10px;
+    width: 800px;
+    margin: 0 auto;
+    height: 800px;
+  }
+  
+  .form {
+    font-size: 1rem;
+  }
+  
+  .form input[type="text"],
+  .form input[type="email"],
+  .form input[type="password"],
+  .form textarea {
+    background: #F5F5F5;
+    border-color: #D8D8D8;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+    box-shadow: none;
+    display: inline-block;
+    max-width: 100%;
+    padding: 0.75rem;
+    -webkit-appearance: none;
+  }
+  
+  .form input[type="text"]:focus,
+  .form input[type="email"]:focus,
+  .form input[type="password"]:focus,
+  .form textarea:focus {
+    background: #FFF;
+    border-color: #338EDA;
+    outline: 0;
+  }
+  
+  .form textarea,
+  .form .textarea {
+    min-height: 150px;
+  }
+  
+  .form textarea,
+  .form .textarea-tall {
+    min-height: 300px;
+  }
+  
+  .form-stacked input[type="text"],
+  .form-stacked input[type="email"],
+  .form-stacked input[type="password"],
+  .form-stacked textarea {
+    display: block;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  
+  .form-block textarea {
+    border-top-radius: 0;
+  }
+  
+  .form-controls {
+    padding: 0 0.75rem;
+    border-top: 1px solid #D8D8D8;
+    border-left: 1px solid #D8D8D8;
+    border-right: 1px solid #D8D8D8;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  
+  .form-controls .button {
+    padding: 0 1rem;
+    font-size: 1.125rem;
+  }
+  
+  .button {
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    min-height: 2rem;
+    line-height: 2rem;
+    font-size: 14px;
+    font-family: inherit;
+    text-decoration: none;
+    padding: 0 0.75rem;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+  
+  .label {
+    display: block;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.375rem;
+    font-size: 0.875rem;
+  }
+  
+  .note {
+    background: #D8D8D8;
+    font-size: 0.825rem;
+    width: 250px;
+    padding: 0.75rem;
+    border-radius: 2px;
+    position: fixed;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 100;
+  }
+  
+  .note a {
+    color: #338EDA;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+
+/* BOX CSS FILE STARTS HERE */
+.codebox{
+    width: 900px;
+    height: 300px;
+    background-color: black;
+    margin-left: 10%;
+    margin-top: 20px;
+
+}
+
+.codebox2{
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.box{
+    display: flex;
+}
+
+.insidebox{
+    width: 250px;
+    height: 50px;
+    background-color: green;
+    margin: 0px 20px 20px 20px;
+}
+
+#questionType
+{
+    width: 300px;
+    height: 50px;
+    background-color: transparent;
+    margin: 0px 10px 10px 10px;
+}
+#codebox3{
+    width: 1230px;
+    background-color: transparent;
+    margin-left: 10%;
+    margin-top: 40px;
+
+}
+/* BOX CSS FILE ENDS  HERE */
+
+/* LOADING ICON  */
+
+.loading-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-popup-container {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

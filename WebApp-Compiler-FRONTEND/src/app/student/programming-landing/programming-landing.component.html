@@ -1,0 +1,44 @@
+<app-header></app-header>
+     
+
+<div class="container">
+    <div class="card">
+      <div class="card-title" id="questionId1">{{selectedQuesObj.questionHeading1}}</div>
+      <div class="card-description" id="question1">{{selectedQuesObj.question1}}</div>
+      <button class="card-button" (click)="studentPrgmPage($event)" id="q1">Solve Question</button>
+    </div>
+
+    <div class="card">
+      <div class="card-title" id="questionId2">{{selectedQuesObj.questionHeading2}}</div>
+      <div class="card-description" id="question2">{{selectedQuesObj.question2}}</div>
+      <button class="card-button" (click)="studentPrgmPage($event)" id="q2">Solve Question</button>
+    </div>
+
+    <div class="card">
+      <div class="card-title" id="questionId3">{{selectedQuesObj.questionHeading3}}</div>
+      <div class="card-description" id="question3">{{selectedQuesObj.question3}}</div>
+      <button class="card-button" (click)="studentPrgmPage($event)" id="q3">Solve Question</button>
+    </div>
+
+    <div class="card">
+      <div class="card-title" id="questionId4">{{selectedQuesObj.questionHeading4}}</div>
+      <div class="card-description" id="question4">{{selectedQuesObj.question4}}</div>
+      <button class="card-button" (click)="studentPrgmPage($event)" id="q4">Solve Question</button>
+    </div>
+
+    <div class="card">
+      <div class="card-title" id="questionId5">{{selectedQuesObj.questionHeading5}}</div>
+      <div class="card-description" id="question5">{{selectedQuesObj.question5}}</div>
+      <button class="card-button" (click)="studentPrgmPage($event)" id="q5">Solve Question</button>
+    </div>
+    <div class="row" id=" ">
+      <div class="col">
+        <button class="button" (click)="backToMcq()" id="q5">Instructions</button>
+      </div>
+      <br>
+      <div class="col">
+        <button class="button-submit" (click)="Submit()" id="q5">Submit Exam</button>
+      </div>
+    </div>
+    <br>
+  </div>

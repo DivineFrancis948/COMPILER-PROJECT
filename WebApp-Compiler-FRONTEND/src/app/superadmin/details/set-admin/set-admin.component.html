@@ -1,0 +1,88 @@
+<section class="content" id="id-enter">
+    <div class="col-md-12">
+        <div class="card ipsh-card">
+            <div class="card-header">
+                <h3 class="card-title"><i class="far fa-user mr-2 fa-icon-gradient-default"></i>Set As Admin</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="userName">User Name<a class="psh-label-requried">*</a></label>
+                            <!-- <span class="error-msg-span">{{validationMessage.guestId}}</span> -->
+                            <input type="text" class="form-control" id="userNameA"
+                                placeholder="User Name" value="" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname">Full Name<a class="psh-label-requried">*</a></label>
+                            <!-- <span class="error-msg-span">{{validationMessage.guestPhoneNo}}</span> -->
+                            <input type="text" class="form-control" id="fullnameA"
+                                placeholder="Full Name" value="" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email<a class="psh-label-requried">*</a></label>
+                            
+                            <input type="email" class="form-control" id="emailA"
+                                placeholder="Email" value="" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number<a class="psh-label-requried">*</a></label>
+                            <!-- <span class="error-msg-span">{{validationMessage.guestAddress}}</span> -->
+                            <input type="number" class="form-control" id="phoneNumberA"
+                                placeholder="Phone Number" value="" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="college">College<a class="psh-label-requried">*</a></label>
+                            <!-- <span class="error-msg-span">{{validationMessage.guestAddress}}</span> -->
+                            <input type="text" class="form-control" id="collegeA"
+                                placeholder="College" value="" readonly>
+                        </div>
+ 
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="branch">Branch<a class="psh-label-requried">*</a></label>
+                            <!-- <span class="error-msg-span">{{validationMessage.guestAadhaarNo}}</span> -->
+                            <input type="text" class="form-control" id="branchA"
+                                placeholder="Branch" value="" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender<a class="psh-label-requried">*</a></label>
+                            <!-- <span class="error-msg-span">{{validationMessage.guestRoomNo}}</span> -->
+                            <input type="text" class="form-control" id="genderA"
+                                placeholder="Gender" value="" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="userType">User Type<a class="psh-label-requried">*</a></label>
+                            <!-- <span class="error-msg-span">{{validationMessage.guestRoomType}}</span> -->
+                            <input type="text" class="form-control" id="userTypeA"
+                                placeholder="User Type" value="" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status<a class="psh-label-requried">*</a></label>
+                            <!-- <span class="error-msg-span">{{validationMessage.guestRoomType}}</span> -->
+                            <input type="text" class="form-control" id="statusA"
+                                placeholder="Status" value="" readonly>
+                        </div>
+    
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer clearfix">
+                <button type="button" class="btn action-btns action-btn float-right" (click)="setAsAdmin()" style="margin-right: 10px;">
+                SET AS ADMIN
+                </button>
+
+                <button type="button" class="btn action-btns action-btn float-right" (click)="backToUser()" style="margin-right: 10px;">
+                  LIST
+                </button>
+            </div>
+            <!-- /.card-footer-->
+        </div>
+    </div>
+</section>
+

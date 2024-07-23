@@ -1,0 +1,21 @@
+<app-sidebar></app-sidebar>   
+<div class="container">
+  <div *ngFor="let question of questions; let i = index">
+    <div class="card">
+      <div class="card-title" [attr.id]="'questionId' + (i + 1)">{{ question.QuestionHeading }}</div>
+      <div class="card-description" [attr.id]="'question' + (i + 1)">{{ question.Question }}</div>
+      <button class="card-button" (click)="studentPrgmPage($event,i)" [attr.id]="'q' + (i + 1)">Solve Question</button>
+    </div>
+  </div>
+  
+    <div class="row" id=" ">
+      <div class="col">
+        <button class="button" (click)="backToMcq()" id="q5">Questions Table</button>
+      </div>
+      <br>
+      <div class="col">
+        <button class="button-submit" (click)="Submit()" id="q5">Finish</button>
+      </div>
+    </div>
+    <br>
+  </div>

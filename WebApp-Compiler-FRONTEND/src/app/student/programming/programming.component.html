@@ -1,0 +1,141 @@
+<div class="box">
+  <div class="column left-column">
+      <div class="box3">
+          <div class="topbox">
+            <button class="button" style="background-color: transparent; border: none;color: white;padding: 5px;" (click)="backtomenu()">Programming Menu</button>
+          </div>
+          <h1 class="heading">{{this.selectedQuestionHeading}}</h1>
+          <p class="question">
+            {{this.selectedQuestion}}
+          </p>
+          <p class="example">
+              Example 1:
+              Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+              Output: [1,2,2,3,5,6]
+              Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+              The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
+          </p>
+          <p class="example">
+              Example 1:
+              Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+              Output: [1,2,2,3,5,6]
+              Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+              The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
+          </p>
+          <!-- <h6 class="constraints-h">Contraints</h6> -->
+          <p class="constraints">
+             <li>nums1.length == m + n</li>
+             <li>nums1.length == m + n</li> 
+             <li>nums1.length == m + n</li> 
+             <li>nums1.length == m + n</li> 
+             <li>nums1.length == m + n</li> 
+          </p>
+          <div class="bottombox">
+              <div class="input-container">
+                  <input type="text" class="rounded-input" [(ngModel)]="customRun.input" placeholder="Type the custom input here">
+              </div>
+              <div class="input-container2">
+                  <input type="text" class="rounded-input" [(ngModel)]="this.testCaseResultt" placeholder="Output will Shown here">
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="column right-column">
+      <div class="box1">
+          <div class="topbox2">
+              <div class="selector">
+                <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                <select class="rounded-button-icon" id="inlineFormSelectPref" [(ngModel)]="selectedLanguage" (ngModelChange)="setlanguage($event)">
+                  <option style="background-color: black;" value="Choose Language">Choose Language</option>
+                  <option style="background-color: black;" value="java">java</option>
+                  <option style="background-color: black;" value="cpp">Cpp</option>
+                  <option style="background-color: black;" value="c">C</option>
+                  <option style="background-color: black;" value="python3">Python</option>
+                </select>
+              </div>
+          </div>
+          <textarea type="text" class="form-control" aria-label="Editor" #editor></textarea>
+
+      </div>
+
+      <div class="box2">
+          <div class="TestCase">TEST CASES
+            <button class="rounded-button-icon-submit" (click)="submit()"> 
+                <span class="icon-submit">&#10148;</span> <!-- Checkmark icon -->
+                SUBMIT
+            </button>
+            <button class="rounded-button-icon-save" (click)="saveUserCode()">
+                <span class="icon-save">&#128193;</span> <!-- Checkmark icon -->
+                SAVE
+            </button> 
+            <button class="rounded-button-icon-run" (click)="runUserCode()">
+                <span class="icon-run">&#9654;</span> <!-- Checkmark icon -->
+                RUN
+            </button>
+          </div>
+          <button class="rounded-button {{ isConditionMet1 ? 'rounded-button' : 'rounded-button-red' }}">
+            <span class="icon {{ isConditionMet1 ? 'icon' : 'icon-red' }}">{{ isConditionMet1 ? '&#10003;' : '&#10008;' }}</span><!-- Checkmark icon -->
+              TestCase: 01
+          </button>
+          <button class="rounded-button {{ isConditionMet2 ? 'rounded-button' : 'rounded-button-red' }}">
+            <span class="icon {{ isConditionMet2 ? 'icon' : 'icon-red' }}">{{ isConditionMet2 ? '&#10003;' : '&#10008;' }}</span><!-- Checkmark icon -->
+              TestCase: 02
+          </button>
+          <button class="rounded-button {{ isConditionMet3 ? 'rounded-button' : 'rounded-button-red' }}">
+            <span class="icon {{ isConditionMet3 ? 'icon' : 'icon-red' }}">{{ isConditionMet3 ? '&#10003;' : '&#10008;' }}</span><!-- Checkmark icon -->
+              TestCase: 03
+          </button>
+          <button class="rounded-button {{ isConditionMet4 ? 'rounded-button' : 'rounded-button-red' }}">
+            <span class="icon {{ isConditionMet4 ? 'icon' : 'icon-red' }}">{{ isConditionMet4 ? '&#10003;' : '&#10008;' }}</span><!-- Checkmark icon -->
+              TestCase: 04
+          </button>
+          <button class="rounded-button {{ isConditionMet5 ? 'rounded-button' : 'rounded-button-red' }}">
+            <span class="icon {{ isConditionMet5 ? 'icon' : 'icon-red' }}">{{ isConditionMet5 ? '&#10003;' : '&#10008;' }}</span><!-- Checkmark icon -->
+              TestCase: 05
+          </button>   
+          <button class="rounded-button {{ isConditionMet6 ? 'rounded-button' : 'rounded-button-red' }}">
+            <span class="icon {{ isConditionMet6 ? 'icon' : 'icon-red' }}">{{ isConditionMet6 ? '&#10003;' : '&#10008;' }}</span><!-- Checkmark icon -->
+              TestCase: 06
+          </button>
+          <button class="rounded-button {{ isConditionMet7 ? 'rounded-button' : 'rounded-button-red' }}">
+            <span class="icon {{ isConditionMet7 ? 'icon' : 'icon-red' }}">{{ isConditionMet7 ? '&#10003;' : '&#10008;' }}</span><!-- Checkmark icon -->
+              TestCase: 07
+          </button>
+          <button class="rounded-button {{ isConditionMet8 ? 'rounded-button' : 'rounded-button-red' }}">
+            <span class="icon {{ isConditionMet8 ? 'icon' : 'icon-red' }}">{{ isConditionMet8 ? '&#10003;' : '&#10008;' }}</span><!-- Checkmark icon -->
+              TestCase: 08
+          </button>
+          <button class="rounded-button {{ isConditionMet9 ? 'rounded-button' : 'rounded-button-red' }}">
+            <span class="icon {{ isConditionMet9 ? 'icon' : 'icon-red' }}">{{ isConditionMet9 ? '&#10003;' : '&#10008;' }}</span><!-- Checkmark icon -->
+              TestCase: 09
+          </button>
+          <button class="rounded-button {{ isConditionMet10 ? 'rounded-button' : 'rounded-button-red' }}">
+            <span class="icon {{ isConditionMet10 ? 'icon' : 'icon-red' }}">{{ isConditionMet10 ? '&#10003;' : '&#10008;' }}</span><!-- Checkmark icon -->
+              TestCase: 10
+          </button>
+          
+      </div>
+  </div>
+</div>
+
+  <div *ngIf="condition" class="terminal">
+    <div class="title-bar">
+        <span class="title">Compilation Error</span>
+        <div class="buttons">
+            <div class="buttonn closee" (click)="closemodal()"></div>   
+        </div>
+    </div>
+    <div class="content">
+        <!-- Terminal content goes here -->
+        <p class="question">{{this.error}}</p>
+    </div>
+</div>
+<div *ngIf="showLoadingPopup" class="loading-popup-overlay">
+  <div class="loading-popup-container">
+    <div class="loading-spinner"></div>
+    <p>Compiling...</p>
+  </div>
+</div>
+
+  <!-- <script src="../../../assets/ext-script.js"></script> -->

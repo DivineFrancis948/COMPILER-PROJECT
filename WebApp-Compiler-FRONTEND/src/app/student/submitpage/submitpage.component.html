@@ -1,0 +1,240 @@
+<div class="box">
+    <div class="column left-column">
+      <div class="box1">
+        <h3 class="heading">Programming Questions</h3>
+        <div class="card" *ngFor="let detail of this.programQuestions">
+          <div class="card-title" id="questionId1">{{detail.questionid}}</div>
+          <button class="card-button" (click)="studentPrgmPage($event)" id="q1">TestCase Passed: {{detail.testCasePassed}}</button>
+        </div>
+  
+        <br> 
+        <h3 class="heading">Multiple Choice Questions</h3>
+        <div class="card">
+          <div class="card-title" id="questionId1">Saved</div>
+          <button class="card-button" (click)="studentPrgmPage($event)" id="q1">10</button>
+        </div>
+        <div class="card">
+          <div class="card-title" id="questionId1">Attended</div>
+          <button class="card-button" (click)="studentPrgmPage($event)" id="q1">10</button>
+        </div>
+        <div class="card">
+          <div class="card-title" id="questionId1">Marked for Review</div>
+          <button class="card-button" (click)="studentPrgmPage($event)" id="q1">10</button>
+        </div>
+      </div>
+      <!-- BOX ONE ENDS HERE -->
+    </div>
+    <!-- column left-column ENDS HERE -->
+  
+    <div class="column right-column">
+      
+    <div class="box1">  
+      <h3 class="heading">Feed-Back Form</h3>
+      <form method="post" id="myform">    
+        <div class="row mb-3" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);margin-right: 5%; height:70px;padding:5px;margin-top: 18px;">  
+          <div class="col-md-12">  
+            <label>How would you rate the overall event experience?</label>
+            <div class="d-flex flex-wrap">  
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_overall_experience" value="1" id="rating_overall_experience_0" class="form-check-input"/>
+                <label class="form-check-label" for="rating_overall_experience_0">1</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_overall_experience" value="2" id="rating_overall_experience_1" class="form-check-input"/>
+                <label class="form-check-label" for="rating_overall_experience_1">2</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_overall_experience" value="3" id="rating_overall_experience_2" class="form-check-input"/>
+                <label class="form-check-label" for="rating_overall_experience_2">3</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_overall_experience" value="4" id="rating_overall_experience_3" class="form-check-input"/>
+                <label class="form-check-label" for="rating_overall_experience_3">4</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_overall_experience" value="5" id="rating_overall_experience_4" class="form-check-input"/>
+                <label class="form-check-label" for="rating_overall_experience_4">5</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);margin-right: 5%; height:70px;padding:5px;margin-top: 18px;">  
+          <div class="col-md-12">  
+            <label>How would you rate the registration process?</label>
+            <div class="d-flex flex-wrap">  
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_reg_process" value="1" id="rating_reg_process_0" class="form-check-input"/>
+                <label class="form-check-label" for="rating_reg_process_0">1</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_reg_process" value="2" id="rating_reg_process_1" class="form-check-input"/>
+                <label class="form-check-label" for="rating_reg_process_1">2</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_reg_process" value="3" id="rating_reg_process_2" class="form-check-input"/>
+                <label class="form-check-label" for="rating_reg_process_2">3</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_reg_process" value="4" id="rating_reg_process_3" class="form-check-input"/>
+                <label class="form-check-label" for="rating_reg_process_3">4</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_reg_process" value="5" id="rating_reg_process_4" class="form-check-input"/>
+                <label class="form-check-label" for="rating_reg_process_4">5</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);margin-right: 5%; height:70px;padding:5px;margin-top: 18px;">  
+          <div class="col-md-12">  
+            <label>How would you rate the event location/venue?</label>
+            <div class="d-flex flex-wrap">  
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_venue" value="1" id="rating_venue_0" class="form-check-input"/>
+                <label class="form-check-label" for="rating_venue_0">1</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_venue" value="2" id="rating_venue_1" class="form-check-input"/>
+                <label class="form-check-label" for="rating_venue_1">2</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_venue" value="3" id="rating_venue_2" class="form-check-input"/>
+                <label class="form-check-label" for="rating_venue_2">3</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_venue" value="4" id="rating_venue_3" class="form-check-input"/>
+                <label class="form-check-label" for="rating_venue_3">4</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_venue" value="5" id="rating_venue_4" class="form-check-input"/>
+                <label class="form-check-label" for="rating_venue_4">5</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);margin-right: 5%; height:70px;padding:5px;margin-top: 18px;">  
+          <div class="col-md-12">  
+            <label>How would you rate the event schedule and timing?</label>
+            <div class="d-flex flex-wrap">  
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_schedule" value="1" id="rating_schedule_0" class="form-check-input"/>
+                <label class="form-check-label" for="rating_schedule_0">1</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_schedule" value="2" id="rating_schedule_1" class="form-check-input"/>
+                <label class="form-check-label" for="rating_schedule_1">2</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_schedule" value="3" id="rating_schedule_2" class="form-check-input"/>
+                <label class="form-check-label" for="rating_schedule_2">3</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_schedule" value="4" id="rating_schedule_3" class="form-check-input"/>
+                <label class="form-check-label" for="rating_schedule_3">4</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_schedule" value="5" id="rating_schedule_4" class="form-check-input"/>
+                <label class="form-check-label" for="rating_schedule_4">5</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);margin-right: 5%; height:70px;padding:5px;margin-top: 18px;">  
+          <div class="col-md-12">  
+            <label>How would you rate the quality of the presentations/sessions?</label>
+            <div class="d-flex flex-wrap">  
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_presentations" value="1" id="rating_presentations_0" class="form-check-input"/>
+                <label class="form-check-label" for="rating_presentations_0">1</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_presentations" value="2" id="rating_presentations_1" class="form-check-input"/>
+                <label class="form-check-label" for="rating_presentations_1">2</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_presentations" value="3" id="rating_presentations_2" class="form-check-input"/>
+                <label class="form-check-label" for="rating_presentations_2">3</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_presentations" value="4" id="rating_presentations_3" class="form-check-input"/>
+                <label class="form-check-label" for="rating_presentations_3">4</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_presentations" value="5" id="rating_presentations_4" class="form-check-input"/>
+                <label class="form-check-label" for="rating_presentations_4">5</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);margin-right: 5%; height:70px;padding:5px;margin-top: 18px;">  
+          <div class="col-md-12">  
+            <label>How would you rate the communication before, during, and after the event?</label>
+            <div class="d-flex flex-wrap">  
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_communications" value="1" id="rating_communications_0" class="form-check-input"/>
+                <label class="form-check-label" for="rating_communications_0">1</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_communications" value="2" id="rating_communications_1" class="form-check-input"/>
+                <label class="form-check-label" for="rating_communications_1">2</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_communications" value="3" id="rating_communications_2" class="form-check-input"/>
+                <label class="form-check-label" for="rating_communications_2">3</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_communications" value="4" id="rating_communications_3" class="form-check-input"/>
+                <label class="form-check-label" for="rating_communications_3">4</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_communications" value="5" id="rating_communications_4" class="form-check-input"/>
+                <label class="form-check-label" for="rating_communications_4">5</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);margin-right: 5%; height:70px;padding:5px;margin-top: 18px;">  
+          <div class="col-md-12">  
+            <label>How would you rate the opportunities for networking at the event?</label>
+            <div class="d-flex flex-wrap">  
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_networking" value="1" id="rating_networking_0" class="form-check-input"/>
+                <label class="form-check-label" for="rating_networking_0">1</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_networking" value="2" id="rating_networking_1" class="form-check-input"/>
+                <label class="form-check-label" for="rating_networking_1">2</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_networking" value="3" id="rating_networking_2" class="form-check-input"/>
+                <label class="form-check-label" for="rating_networking_2">3</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_networking" value="4" id="rating_networking_3" class="form-check-input"/>
+                <label class="form-check-label" for="rating_networking_3">4</label>
+              </div>
+              <div class="form-check form-check-inline me-3">  
+                <input type="radio" name="rating_networking" value="5" id="rating_networking_4" class="form-check-input"/>
+                <label class="form-check-label" for="rating_networking_4">5</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">  
+          <div class="col-md-12">  
+            <label for="like_most_about_event" class="form-label">What did you like most about the event?</label>
+            <textarea name="like_most_about_event" class="form-control" id="like_most_about_event" rows="6"></textarea>
+          </div>
+        </div>
+        
+        <div class="row mb-3">  
+          <div class="col-md-6 d-flex align-items-center">  
+            <button class="btn btn-lg px-4" style="background-color:#007bff;border-color:#007bff;color:white;" type="submit" (click)="thankyou()">Submit Exam</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  
+  
+    </div>
+  </div>

@@ -1,0 +1,64 @@
+<app-header></app-header>
+<div class="heading">
+  Read the following instructions carefully 
+</div>
+<ol>
+<div class="heading2">
+  General Instructions:
+</div>
+
+<div class="paragraph">
+  <li>Do not switch tabs or open other applications during the examination.</li>
+  <li>Copy-paste is prohibited. You must enter your answers manually.</li>
+  <li>Answer the Multiple Choice Questions (MCQs) first, and then proceed to programming questions.</li>
+  <li>The total time remaining for the examination will be displayed in the navbar.</li>
+  <li>Verify the details displayed in the navbar. If any discrepancies are found, inform the examiner immediately.</li>
+  <li>Malpractice is recorded, and marks will be deducted accordingly.</li>
+  <li>Read all instructions carefully before starting the examination.</li>
+</div>
+
+<div class="heading2">
+  Programming Question:
+</div>
+
+<div class="paragraph">
+  <li>Save the program before submitting.</li>
+  <li>You can run custom test cases using the run button.</li>
+  <li>Enter custom input in the left box, and the output will be displayed here.</li>
+  <li>Compilation errors will be shown in a separate window box.</li>
+  <li>Select the programming language of the program.</li>
+  <li>Do not press submit before saving the code.</li>
+  <li>The Programming menu button in the left upper corner will show the list of programming questions.</li>
+  <li>After submitting programming questions, click the submit button.</li>
+  <li>Click the submit button before the time ends; otherwise, you will be automatically logged off, and your
+      marks won't be recorded.</li>
+</div>
+<div class="heading2">
+  Multiple Choice Question:
+</div>
+
+<div class="paragraph">
+  <li><button class="round-button green-button">Green Button</button> This Button Indicates that you had Answered the Question</li>
+  <li><button class="round-button yellow-button">Yellow Button</button> This Button Indicates that you had Marked For Review the Question</li>
+  <li><button class="round-button white-button">White Button</button> This Button Indicates that you had Not Attemted the Question</li>
+  <li>You should first attempt the MCQ questions.</li>
+  <li>Only 15 questions are there.</li>
+  <li>No negative marks.</li>
+  <li>You should submit the exam by clicking the submit button.</li>
+  <li>The Next button will save the selected answer and show the next question.</li>
+  <li>The Previous button will show the previous question.</li>
+  <li>Tab switching is not possible; if you switch the tab, it is recorded and considered as malpractice.</li>
+  <li>Refresh of the page is also prohibited.</li>
+</div>
+</ol>
+
+
+<div class="row" id="buttons">
+  <div class="col">
+    <button class="button" (click)="mcqPage()" id="q5">Multiple Choice</button>
+  </div>
+  <br>
+  <div class="col">
+    <button class="button-submit" (click)="prgLandingPage()" id="q5">Programming Questions</button>
+  </div>
+</div>

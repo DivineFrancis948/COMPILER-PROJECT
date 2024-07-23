@@ -1,0 +1,78 @@
+<div class="container" id="main">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.fullname}}</span>
+            <input type="text" placeholder="Enter your name" [(ngModel)]="regDTO.fullname" name="fullname" id="fullname" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.userName}}</span>
+            <input type="text" placeholder="Enter your username" [(ngModel)]="regDTO.userName" name="username" id="username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.email}}</span>
+            <input type="text" placeholder="Enter your email" [(ngModel)]="regDTO.email" name="email" id="email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.phoneNumber}}</span>
+            <input type="text" placeholder="Enter your number" [(ngModel)]="regDTO.phoneNumber" name="phoneNumber" id="phoneNumber" required>
+          </div>
+          <div class="input-box">
+            <span class="details">College</span>
+            <input type="text" placeholder="Enter your College" [(ngModel)]="regDTO.college" name="college" id="college" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Branch</span>
+            <input type="text" placeholder="Enter your branch" [(ngModel)]="regDTO.branch" name="branch" id="branch" required>
+          </div>
+          <div class="input-box">
+            <span class="details">KTU ID</span>
+            <input type="text" placeholder="Enter your KTU Id" [(ngModel)]="regDTO.ktuId" name="ktuid" id="ktuid" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Year</span>
+            <input type="text" placeholder="Enter your year" id="year" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.password}}</span>
+            <input type="password" placeholder="Enter your password" [(ngModel)]="regDTO.password" name="password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Confirm your password" required>
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1" [(ngModel)]="regDTO.gender" value="Male">
+          <input type="radio" name="gender" id="dot-2" [(ngModel)]="regDTO.gender" value="Female">
+          <input type="radio" name="gender" id="dot-3" [(ngModel)]="regDTO.gender" value="Prefer not to say">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.gender}}</span>
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button" >
+          <input type="submit" value="Register" (click)="register()">
+        </div>
+      </form>
+    </div>
+  </div>

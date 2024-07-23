@@ -1,0 +1,131 @@
+
+
+.container {
+  font-family: Arial, sans-serif;
+  position: absolute;
+  top: 20%;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 80%;
+  margin: 0 auto 50px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2); /* Adjust the color and opacity as needed */
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-style: italic; /* Make the text italic */
+  font-size: 16px;
+  color: grey;
+  margin-bottom: 20px;
+  width:80%;
+}
+
+.card-button {
+  position: absolute;
+  bottom: 35%;
+  right: 2.5%;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #fff;
+  background-color: lightgreen;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0; /* Background color for the progress bar container */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.progress-bar {
+  height: 10px; /* Height of the progress bar */
+  width: 0; /* Initial width (can be dynamically set) */
+  background-color:  green; /* Light green color for the progress bar */
+  transition: width 0.3s ease; /* Smooth transition effect */
+}
+
+.celebration-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.confetti {
+  width: 10px;
+  height: 10px;
+  background-color: #e74c3c; /* Red confetti color */
+  position: absolute;
+}
+
+.button {
+  position: absolute;
+  bottom: 35%;
+  right: 25%;
+  left: 25%;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #fff;
+  background-color: darkgrey;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#card-bottons {
+  align-items: center;
+  width: 80%;
+  margin: 0 auto 50px;
+  padding: 20px;
+}
+
+.button-submit {
+  position: absolute;
+  bottom: 35%;
+  right: 25%;
+  left: 25%;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+

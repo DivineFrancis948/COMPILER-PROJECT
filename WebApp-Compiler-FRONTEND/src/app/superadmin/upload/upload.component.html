@@ -1,0 +1,152 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<app-sidebar></app-sidebar>
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-blue order-card">
+                <div class="card-block">
+                    <h2 class="m-b-20">MCQ Questions</h2>
+                    <h2 class="text-right"><span></span></h2>
+                    <div class="file-input-container">
+                        <input type="file" id="fileInput" />
+                        <label for="fileInput" class="file-input-label">Choose File</label>
+                        <button class="fa-button" (click)="importMCQQuestions()">
+                            <i class="fa fa-cloud-upload f-left"></i>
+                          </button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-green order-card">
+                <div class="card-block">
+                    <h2 class="m-b-20">PRG Questions</h2>
+                    <h2 class="text-right"><span></span></h2>
+                    <div class="file-input-container">
+                        <input type="file" id="fileInput" />
+                        <label for="fileInput" class="file-input-label">Choose File</label>
+                        <button class="fa-button" (click)="importPRGQuestions()">
+                            <i class="fa fa-cloud-upload f-left"></i>
+                          </button> 
+                    </div>
+                </div>
+            </div>
+        </div> -->
+     
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-blue order-card">
+                <div class="card-block">
+                    <h2 class="m-b-20">MCQ Questions</h2>
+                    <h2 class="text-right"><span></span></h2>
+                    <div class="file-input-container">
+                        <input type="file" name="file" class="file-input-label" id="file1" aria-describedby="inputGroupFileAddon01" (change)="onFileSelected($event,'mcq')">
+                        <label for="file1" class="file-input-label originalFileLabel originalFileLabel_MCQ">Choose File</label>
+                        <label class="tempFileLabel_MCQ" for="file1"></label>
+                    </div>
+                    <div class="button-container">
+                        <button class="fa-button" (click)="importMCQQuestions()">
+                            <i class="fa fa-cloud-upload f-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-green order-card">
+                <div class="card-block">
+                    <h2 class="m-b-20">PRG Questions</h2>
+                    <h2 class="text-right"><span></span></h2>
+                    <div class="file-input-container">
+                        <input type="file" name="file" class="file-input-label" id="file2" aria-describedby="inputGroupFileAddon01" (change)="onFileSelected($event,'prg')">
+                        <label for="file2" class="file-input-label originalFileLabel originalFileLabel_PRG">Choose File</label>
+                        <label class="tempFileLabel_PRG" for="file2"></label>
+                    </div>
+                    <div class="button-container">
+                        <button class="fa-button" (click)="importPRGQuestions()">
+                            <i class="fa fa-cloud-upload f-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-yellow order-card">
+                <div class="card-block">
+                    <h2 class="m-b-20">Student Details</h2>
+                    <h2 class="text-right"><span></span></h2>
+                    <div class="file-input-container">
+                        <input type="file" name="file" class="file-input-label" id="file3" aria-describedby="inputGroupFileAddon01" (change)="onFileSelected($event,'student')">
+                        <label for="file3" class="file-input-label originalFileLabel originalFileLabel_STU">Choose File</label>
+                        <label class="tempFileLabel_STU" for="file3"></label>
+                    </div>
+                    <div class="button-container">
+                        <button class="fa-button" (click)="importStudentDetails()">
+                            <i class="fa fa-cloud-upload f-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-yellow order-card">
+                <div class="card-block">
+                    <h2 class="m-b-20">Student Details</h2>
+                    <h2 class="text-right"><span></span></h2>
+                    <div class="file-input-container">
+
+                        <input type="file" name="file" class="file-input-label" id="file"
+                        aria-describedby="inputGroupFileAddon01" (change)="onFileSelected($event)">
+                        <label for="file" class="file-input-label originalFileLabel">Choose File</label>
+                        <label class="tempFileLabel" for="file"></label>
+         
+                    </div>
+                    <button class="fa-button" (click)="importStudentDetails()">
+                        <i class="fa fa-cloud-upload f-left"></i>
+                    </button> 
+                </div>
+            </div>
+        </div> -->
+        
+        <!-- <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-pink order-card">
+                <span class="card-block">
+                    <h2 class="m-b-20">Questionnair Details</h2>
+
+                    <div class="file-input-container">
+                        <input type="file" id="fileInput" />
+                        <label for="fileInput" class="file-input-label">Choose File</label>
+                        <button class="fa-button" (click)="importQuestionnair()">
+                            <i class="fa fa-cloud-upload f-left"></i>
+                          </button> 
+                    </div>
+               
+                    </span>
+            </div>
+        </div> -->
+
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-pink order-card">
+                <div class="card-block">
+                    <h2 class="m-b-20">Questionnair Details</h2>
+                    <h2 class="text-right"><span></span></h2>
+                    <div class="file-input-container">
+                        <input type="file" name="file4" class="file-input-label" id="file4" aria-describedby="inputGroupFileAddon01" (change)="onFileSelected($event,'question')">
+                        <label for="file4" class="file-input-label originalFileLabel originalFileLabel_Q">Choose File</label>
+                        <label class="tempFileLabel_Q" for="file4"></label>
+                    </div>
+                    <div class="button-container">
+                        <button class="fa-button" (click)="importQuestionnair()">
+                            <i class="fa fa-cloud-upload f-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+	</div>
+</div>

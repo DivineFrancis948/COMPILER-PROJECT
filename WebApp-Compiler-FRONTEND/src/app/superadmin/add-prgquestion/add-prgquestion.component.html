@@ -1,0 +1,146 @@
+<app-sidebar></app-sidebar>
+<!-- FIRST BOX STARTS HERE -->
+<div class="box">
+  <div class="codebox">
+      <textarea type="text" class="form-control" aria-label="Editor" #editor></textarea>
+  </div>
+  <div class="codebox2">
+      <select id="questionType" name="language" class="grey-outline-label" [(ngModel)]="prgmodel.language" required placeholder="Select Language">
+          <option value="java" class="option-java">Java <i class="fab fa-java"></i></option>
+          <option value="cpp" class="option-cpp">C++ <i class="fab fa-cuttlefish"></i></option>
+          <option value="c" class="option-c">C <i class="fas fa-code"></i></option>
+          <option value="python" class="option-python">Python <i class="fab fa-python"></i></option>
+        </select>
+      <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.inputs}}</span></label>
+      <input type="text" id="questionType" class="grey-outline-label" name="inputs"  [(ngModel)]="prgmodel.inputs" required placeholder="Enter no of inputs in the Program">
+      <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" ></span></label>
+      <input type="text" id="questionType" class="grey-outline-label" name="inputs" required placeholder="Programming Language version">
+      <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.questionId}}</span></label>
+      <input type="text" id="questionType" name="questionId" class="red-outline-label" [(ngModel)]="prgmodel.questionId"  disabled>
+  </div>
+</div>
+<!-- FIRST BOX ENDS HERE -->
+
+<!-- Answer Structure -->
+<div class="form form-stacked" id="codebox3">
+  <div class="form-block">
+    <div class="form-controls">
+      <span>Answer Structure</span>
+        <span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.basic}}</span>
+        <span class="button" title="Strong <strong>" data-button-type="addStrong"><strong>b</strong></span>
+        <span class="button" title="Emphasis <em>" data-button-type="addEmphasis"><strong><em>i</em></strong></span>
+        <span class="button ion-link" title="Link <a>" data-button-type="addLink"></span>
+        <span class="button ion-social-codepen-outline" title="Embed CodePen pen" data-button-type="embedCodePen"></span>
+    </div>
+    <textarea 
+    type="text" 
+    class="form-control" 
+    aria-label="structure" 
+    placeholder="Enter basic code structure here..." 
+    [(ngModel)]="prgmodel.basic"
+    style="height: 200px;"
+  ></textarea>    </div>
+</div>
+
+<!-- TESTCASES STARTS HERE -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-10 offset-1">
+      <br />
+        <details>
+          
+          <summary>Enter Test Case 1</summary>
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase1}}</span></label>
+          <input type="text" id="testcase1" class="green-outline-label" name="testcase1" [(ngModel)]="prgmodel.testcase1" required placeholder="Enter the TestCase 1">
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase1A}}</span></label>
+          <input type="text" id="testcase1a" class="red-outline-label" name="testcase1a" [(ngModel)]="prgmodel.testcase1A" required placeholder="Enter the TestCase 1 Output">
+
+      </details>
+        <details>
+          <summary>Enter Test Case 2</summary>
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase2}}</span></label>
+          <input type="text" id="testcase2" class="green-outline-label" name="testcase2" [(ngModel)]="prgmodel.testcase2" required placeholder="Enter the TestCase 2">
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase2A}}</span></label>
+          <input type="text" id="testcase2A" class="red-outline-label" name="testcase2A" [(ngModel)]="prgmodel.testcase2A" required placeholder="Enter the TestCase 2 output">
+
+      </details>
+        <details>
+          <summary>Enter Test Case 3</summary>
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase3}}</span></label>
+          <input type="text" id="testcase3" class="green-outline-label" name="testcase3" [(ngModel)]="prgmodel.testcase3" required placeholder="Enter the TestCase 3">
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase3A}}</span></label>
+          <input type="text" id="testcase3A" class="red-outline-label" name="testcase3A" [(ngModel)]="prgmodel.testcase3A" required placeholder="Enter the TestCase 3 output">
+
+      </details>
+        <details>
+          <summary>Enter Test Case 4</summary>
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase4}}</span></label>
+          <input type="text" id="testcase4" class="green-outline-label" name="testcase4" [(ngModel)]="prgmodel.testcase4" required placeholder="Enter the TestCase 4">
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase4A}}</span></label>
+          <input type="text" id="testcase2A" class="red-outline-label" name="testcase4A" [(ngModel)]="prgmodel.testcase4A" required placeholder="Enter the TestCase 4 output">
+
+      </details>
+        <details>
+          <summary>Enter Test Case 5</summary>
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase5}}</span></label>
+          <input type="text" id="testcase5" class="green-outline-label" name="testcase5" [(ngModel)]="prgmodel.testcase5" required placeholder="Enter the TestCase 5">
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase5A}}</span></label>
+          <input type="text" id="testcase5A" class="red-outline-label" name="testcase5A" [(ngModel)]="prgmodel.testcase5A" required placeholder="Enter the TestCase 5 output">
+
+      </details>
+        <details>
+          <summary>Enter Test Case 6</summary>
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase6}}</span></label>
+          <input type="text" id="testcase6" class="green-outline-label" name="testcase6" [(ngModel)]="prgmodel.testcase6" required placeholder="Enter the TestCase 6">
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase6A}}</span></label>
+          <input type="text" id="testcase6A" class="red-outline-label" name="testcase6A"  [(ngModel)]="prgmodel.testcase6A" required placeholder="Enter the TestCase 6 output">
+
+      </details>
+        <details>
+          <summary>Enter Test Case 7</summary>
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase7}}</span></label>
+          <input type="text" id="testcase7" class="green-outline-label" name="testcase7" [(ngModel)]="prgmodel.testcase7" required placeholder="Enter the TestCase 7">
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase7A}}</span></label>
+          <input type="text" id="testcase7A" class="red-outline-label" name="testcase7A" [(ngModel)]="prgmodel.testcase7A" required placeholder="Enter the TestCase 7 output">
+
+      </details>
+        <details>
+          <summary>Enter Test Case 8</summary>
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase8}}</span></label>
+          <input type="text" id="testcase8" class="green-outline-label" [(ngModel)]="prgmodel.testcase8" name="testcase8" required placeholder="Enter the TestCase 8">
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase8A}}</span></label>
+          <input type="text" id="testcase8A"  class="red-outline-label" class="red-outline-label" [(ngModel)]="prgmodel.testcase8A" name="testcase8A" required placeholder="Enter the TestCase 8 output">
+
+      </details>
+        <details>
+          <summary>Enter Test Case 9</summary>
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase9}}</span></label>
+          <input type="text" id="testcase9A" class="red-outline-label" name="testcase9A" [(ngModel)]="prgmodel.testcase9" required placeholder="Enter the TestCase 9">
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase9A}}</span></label>
+          <input type="text" id="testcase9A" class="red-outline-label" name="testcase9A" [(ngModel)]="prgmodel.testcase9A" required placeholder="Enter the TestCase 9 output">
+
+      </details>
+        <details style="margin-bottom: 40px;">
+          <summary>Enter Test Case 10</summary>
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase10}}</span></label>
+          <input type="text" id="testcase10" class="green-outline-label" [(ngModel)]="prgmodel.testcase10" name="testcase10" required placeholder="Enter the TestCase 10">
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.testcase10A}}</span></label>
+          <input type="text" id="testcase10A"  class="red-outline-label" class="red-outline-label" [(ngModel)]="prgmodel.testcase10A" name="testcase10A" required placeholder="Enter the TestCase 10 output">
+
+      </details>
+    </div>
+  </div>
+  <div class="button"  (click)="add()" style="width: 250px; height:40px;background-color: black; color: white; margin-left: 9%; padding: 2.5px;padding-left: 10px;">Submit Programming Question
+    </div>
+    <div class="button" (click)="addNextQuestion()" style="width: 250px; height:40px;background-color: black; color: white; margin-left: 9%;margin-top: 20px; margin-bottom: 30px;padding: 2.5px;padding-left: 10px;">Add Next Question
+    </div>
+    <div class="button" (click)="Extractoutput()" style="width: 250px; height:40px;background-color: black; color: white; margin-left: 9%;margin-top: 20px; margin-bottom: 30px;padding: 2.5px;padding-left: 10px;">Extract Output
+  </div>
+</div>
+
+<div *ngIf="showLoadingPopup" class="loading-popup-overlay">
+  <div class="loading-popup-container">
+    <div class="loading-spinner"></div>
+    <p>Compiling...</p>
+  </div>
+</div>

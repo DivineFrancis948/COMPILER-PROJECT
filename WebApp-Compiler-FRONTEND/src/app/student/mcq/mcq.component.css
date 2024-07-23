@@ -1,0 +1,172 @@
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0;
+    font-size: 14px; /* Adjust the font size as needed */
+    line-height: 30px;
+    margin: 30px 60px; /* Adjust the left and right margins as needed */
+}
+.float-right{
+    float: right;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px; /* Adjust the margin as needed */
+    margin-right: 35px; /* Adjust the margin as needed */
+  }
+
+  .dot-green {
+    background-color: green;
+  }
+
+  .dot-black {
+    background-color: black;
+  }
+
+  .dot-yellow {
+    background-color: #ffc107; /* Bootstrap's warning color */
+  }
+
+
+  .text-green {
+    color: green;
+  }
+
+  .text-black {
+    color: black;
+  }
+
+  .text-yellow {
+    color: #ffc107;
+  }
+
+  .timer {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .heading-deatils{
+    font-size: 24px;
+    font-weight: bold;
+    
+  }
+
+#options{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
+  width: 450px;
+}
+
+#MCQHEADING{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-left: 40px;
+  margin-top: 30px;
+
+}
+
+#questionbox{
+  font-size: 15px;
+  margin-left: 40px;
+  width: 95%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#buttonsbox{
+  margin-left: 25px;
+  margin-top: 20px;
+  width: 98%;
+
+}
+
+#cardheader
+{
+  height: 100px;
+}
+
+/* #statusbuttons{
+  margin-left: ;
+} */
+#statusbuttons{
+  margin-left: 5px;
+  margin-bottom: 100px;
+}
+
+
+.rectangle-button-attended {
+  align-items: center;
+  margin: 2px;
+  width: 100%;
+  height: 60%;
+  display: inline-block;
+  padding: 5px 10px  ; /* Adjust padding as needed */
+  font-size: 13px; /* Adjust font size as needed */
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #3498db; /* Button border color */
+  color: white; /* Button text color */
+  background-color: black; /* Button background color */
+  border-radius: 5px; /* Button border radius */
+  transition: background-color 0.3s, color 0.3s;
+}
+.rectangle-button-saved {
+  align-items: center;
+  margin: 2px;
+  width: 100%;
+  height: 60%;
+  display: inline-block;
+  padding: 5px 10px; /* Adjust padding as needed */
+  font-size: 13px; /* Adjust font size as needed */
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #3498db; /* Button border color */
+  color: white; /* Button text color */
+  background-color: green; /* Button background color */
+  border-radius: 5px; /* Button border radius */
+  transition: background-color 0.3s, color 0.3s;
+}
+.rectangle-button-marked {
+  align-items: center;
+  margin: 2px;
+  width: 100%;
+  height: 60%;
+  display: inline-block;
+  padding: 5px 10px; /* Adjust padding as needed */
+  font-size: 13px; /* Adjust font size as needed */
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #3498db; /* Button border color */
+  color: black; /* Button text color */
+  background-color: #ffc107; /* Button background color */
+  border-radius: 5px; /* Button border radius */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover styles */
+.rectangle-button:hover {
+  background-color: #3498db; /* Hover background color */
+  color: #fff; /* Hover text color */
+}
+
+.optionsone{
+  padding: 10px;
+  margin-left: 5px;
+}

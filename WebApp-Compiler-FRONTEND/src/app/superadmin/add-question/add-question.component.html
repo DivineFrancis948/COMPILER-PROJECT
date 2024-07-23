@@ -1,0 +1,67 @@
+<app-sidebar></app-sidebar>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.15.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<div class="container">
+
+  <div class="form form-stacked" style="margin-top: 60px;">
+    <div class="form-block">
+      <div class="form-controls">
+          <span>Username</span>
+          <span class="button ion-code-working" title="Inline code <code>" data-button-type="addInlineCode"></span>
+          <span class="button" title="Strong <strong>" data-button-type="addStrong"><strong>b</strong></span>
+          <span class="button" title="Emphasis <em>" data-button-type="addEmphasis"><strong><em>i</em></strong></span>
+          <span class="button ion-link" title="Link <a>" data-button-type="addLink"></span>
+          </div>
+      <textarea 
+        placeholder="User ID For this Question is" 
+        class="textarea-tall" 
+        id="board_content"
+        [(ngModel)]="questiondto.username"
+      ></textarea>
+    </div>
+  </div>
+
+  <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.questiontype}}</span></label>
+    <select id="questionType" name="questionType" [(ngModel)]="questiondto.questiontype" class="green-outline-label"  required>
+        <option value="MCQ"  name="MCQ">Multiple Choice Question (MCQ)</option>
+        <option value="PRG" name="PRG">Programming Question</option>
+    </select>
+
+    <div class="form form-stacked">
+      <div class="form-block" *ngIf="questiondto.questiontype === 'PRG'">
+        <div class="form-controls">
+          <span>Question Heading</span>
+          <span class="button" title="Strong <strong>" data-button-type="addStrong"><strong>b</strong></span>
+          <span class="button" title="Emphasis <em>" data-button-type="addEmphasis"><strong><em>i</em></strong></span>
+        </div>
+        <textarea 
+          placeholder="Ask a programmer to enter the programming heading which displays for the student" 
+          class="textarea-tall" 
+          id="board_content"
+          [(ngModel)]="questiondto.questionHeading"
+        ></textarea>
+      </div>
+    </div>
+    
+
+    <div class="form form-stacked">
+      <div class="form-block">
+        <div class="form-controls">
+          <label><span class="error-msg-span" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.question}}</span></label>
+          <span>Question</span>
+            <span class="button ion-code-working" title="Inline code <code>" data-button-type="addInlineCode"></span>
+            <span class="button" title="Strong <strong>" data-button-type="addStrong"><strong>b</strong></span>
+            <span class="button" title="Emphasis <em>" data-button-type="addEmphasis"><strong><em>i</em></strong></span>
+            <span class="button" style="color: red;text-transform: capitalize; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{validationMessage.basic}}</span>
+        </div>
+        <textarea style="min-height: 200px;" placeholder="Ask a programmer to enter the programming question in detail which helps to get the logic clearly" class="textarea-tall" id="board_content" [(ngModel)]="questiondto.question"></textarea>
+      </div>
+    </div>
+
+    <div class="button" >
+      <input type="submit" value="Complete Question Details" (click)="add()" style="width: 780px; background-color: black; color: white;">
+    </div>
+    
+</div>
+  

@@ -1,0 +1,56 @@
+.header-container {
+    border-bottom: 0.5px solid white; /* Green border */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .heading
+  {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .header-content {
+    text-transform: capitalize;
+    padding-left:20px;
+    padding-right:20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: #000000; /* Black text color */
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the content horizontally */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically within the flex container */
+  }
+  
+  .profile-photo img {
+    border-radius: 50%; /* Make the image circular */
+    max-width: 100px; /* Adjust the maximum width of the profile photo */
+    margin-right: 20px; /* Add some spacing between the photo and content */
+  }
+  
+  .main-content {
+    flex: 1; /* Allow the main content to expand and fill the remaining space */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #000000; /* Black link color */
+    font-weight: bold;
+  }
+  
+.username
+{
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

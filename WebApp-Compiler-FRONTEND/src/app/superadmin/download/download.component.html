@@ -1,0 +1,71 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<app-sidebar></app-sidebar>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-blue order-card">
+                <div class="card-block">
+                    <h2 class="m-b-20">Export MCQ Questions</h2>
+                    <h2 class="text-right"><span></span></h2>
+                    <div class="file-input-container">
+                        <input type="file" id="fileInput" />
+                        <label for="fileInput" class="file-input-label">Download</label>
+                        <button class="fa-button" (click)="Exportmcqquestions()">
+                            <i class="fa fa-cloud-download f-left"></i>
+                          </button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-green order-card">
+                <div class="card-block">
+                    <h2 class="m-b-20">Export PRG Questions</h2>
+                    <h2 class="text-right"><span></span></h2>
+                    <div class="file-input-container">
+                        <input type="file" id="fileInput" />
+                        <label for="fileInput" class="file-input-label">Download</label>
+                        <button class="fa-button" (click)="Exportprgquestions()">
+                            <i class="fa fa-cloud-download f-left"></i>
+                          </button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-yellow order-card">
+                <div class="card-block">
+                    <h2 class="m-b-20">Export Student Details</h2>
+                    <h2 class="text-right"><span></span></h2>
+                    <div class="file-input-container">
+                        <input type="file" id="fileInput" />
+                        <label for="fileInput" class="file-input-label">Download</label>
+                        <button class="fa-button" (click)="ExportStudent()">
+                            <i class="fa fa-cloud-download f-left"></i>
+                          </button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-pink order-card">
+                <span class="card-block">
+                    <h2 class="m-b-20">Export Questionnair Details</h2>
+
+                    <div class="file-input-container">
+                        <input type="file" id="fileInput" />
+                        <label for="fileInput" class="file-input-label">Download</label>
+                        <button class="fa-button" (click)="ExportQuestionnair()">
+                            <i class="fa fa-cloud-download f-left"></i>
+                          </button> 
+                    </div>
+               
+                    </span>
+            </div>
+        </div>
+
+	</div>
+</div>

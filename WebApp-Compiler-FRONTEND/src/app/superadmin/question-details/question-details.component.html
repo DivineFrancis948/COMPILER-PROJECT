@@ -1,0 +1,149 @@
+<app-sidebar></app-sidebar>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container" id="headings">
+    <i class="fa fa-search-plus" aria-hidden="true"></i> <span class="text">SEARCH QUESTIONS HERE</span>
+</div>
+<div class="container mt-3">
+  <div class="card-body">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="form-group">
+                  <!-- searching with QuestionId -->
+                  <input type="text" class="form-control" id="questionId" placeholder="Enter Question Id" name="questionId">
+              </div>
+              <div class="form-group">
+                  <!-- searching with question -->
+                  <input type="text" class="form-control" id="question" placeholder="Enter Question" name="question">
+              </div>
+          </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+              <!-- searching with questiontype -->
+              <select class="form-control" id="questionType" name="questionType">
+                  <option value="" selected>Select Question Type</option>
+                  <option value="MCQ">Multiple Choice Question</option>
+                  <option value="PRG">Programming Question</option>
+              </select>
+          </div>
+            <div class="form-group">
+                <!-- <label for="idStatus">Status</label> -->
+                <select class="form-control" id="status" name="status">
+                    <option value="" selected>Select Status</option>
+                    <option value="PROCESSD">Processed</option>
+                    <option value="VERIFIED">Verified</option>
+                    <option value="DELETED">Deleted</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <!-- search with date-->
+                <input type="date" class="form-control" id="date" placeholder="select date" name="date">
+            </div>
+            <div class="form-group">
+              <!-- search with status -->
+              <input type="text" class="form-control" id="questionHeading" placeholder="Enter Heading" name="questionHeading">
+          </div>   
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <!-- search with question creator-->
+                <input type="text" class="form-control" id="userName" placeholder="Enter Name" name="userName">
+            </div>  
+
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <button type="button" class="btn action-btn mx-2 clear-btn" style="margin-right: 10px; font-weight: bolder;" (click)="search()">
+                    <i class="fa fa-search" aria-hidden="true"></i>   SEARCH
+                </button>
+            </div> 
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+            <button type="button" class="btn action-btn mx-2 clear-btn" style="margin-right: 10px; font-weight: bolder;" (click)="clear()">
+                <i class="fa fa-backward" aria-hidden="true" style="color: black;"></i>   CLEAR
+            </button>
+        </div> 
+      </div>
+
+      </div>
+  </div>
+</div>
+<div class="container" id="headings"> 
+    <i class="fa fa-table fa-1x" aria-hidden="true"></i><span class="text">QUESTION TABLE</span>  
+    <span id="alligntable" style="margin-left: 25%;color: white;">
+        
+      <button class="btn" (click)="refreshByType('PRG')"><i class="fa fa-desktop fa-1x" aria-hidden="true" style="color:white"></i> <span class="butttontext">Programming</span></button>
+      <span class="badge ipsh-badge prg">
+        {{ statusCountList.prg }}
+      </span>
+      <button class="btn" (click)="refreshByType('MCQ')"><i class="fa fa-question fa-1x" style="color:white"></i> <span class="butttontext">MCQ</span></button>
+      <span class="badge ipsh-badge mcq">
+        {{ statusCountList.mcq }}
+      </span>
+      <button class="btn" (click)="refreshByStatus('VERIFIED')"><i class="fa fa-check-square-o fa-1x" style="color:green"></i> <span class="butttontext">Verify</span></button>
+      <span class="badge badge-dark ipsh-badge-approve">
+        {{ statusCountList.verified }}
+      </span>
+      <button class="btn" (click)="refreshByStatus('DELETED')"><i class="fa fa-times fa-1x" style="color:red"></i> <span class="butttontext">Delete</span></button>
+      <span class="badge badge-danger ipsh-badge-delete">
+        {{ statusCountList.delete }}
+      </span>
+      <button class="btn" (click)="refreshByStatus('PROCESSD')"><i class="fa fa-plus fa-1x" style="color:yellow"></i> <span class="butttontext">To be Added</span></button>
+      <span class="badge badge-warning ipsh-badge-pending">
+        {{ statusCountList.processd }}
+      </span>
+    </span>  
+  </div>
+
+<div class="container">
+    <div class="table">
+        <table id="questionList" class="table">
+            <thead id="id-table-head"> 
+                
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="container" id="headings" style="margin-bottom: 10px;"> 
+    <button class="btn" (click)="addQuestion()"><i class="fa fa-plus fa-1x" style="color:#8B8000"></i> <span class="butttontext" >Add Question</span></button>
+    <button class="btn"><i class="fa fa-print fa-1x" style="color:white"></i> <span class="butttontext">Print</span></button>
+    <button class="btn"><i class="fa fa-cloud-upload fa-1x" style="color: rgb(72, 72, 239)"></i> <span class="butttontext" (click)="uploadMcq()" >Upload</span></button>
+    <button class="btn"><i class="fa fa-cloud-upload fa-1x" style="color: rgb(72, 72, 239)"></i> <span class="butttontext" (click)="uploadPrg()" >Upload Program</span></button>
+    <button class="btn"><i class="fa fa-check-square-o fa-1x" style="color:green"></i> <span class="butttontext" (click)="verifyQuestion()">Verify</span></button>
+    <button class="btn"><i class="fa fa-times fa-1x" style="color:red"></i> <span class="butttontext"  (click)="deleteUser()">Delete</span></button>
+    <button class="btn"><i class="fa fa-pencil-square-o fa-1x" style="color:white"></i> <span class="butttontext" (click)="updateQuestion()">Edit</span></button>
+</div>
+
+<div class="modal fade" data-backdrop="static" id="delete-question-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title">DO YOU WANT TO DELETE</h1>
+              <button type="button" class="close" data-dismiss="modal"  aria-label="Close" (click)="cancelDelete()" >
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <h2> On Click Yes Question will be deleted</h2>  
+                  
+              
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary action-btn float-right" style="color: black;" data-dismiss="modal"
+                  (click)="cancelDelete()">NO</button>
+              <button type="button" class="btn btn-primary action-btn float-right" style="color: black;"
+                  (click)="confirmDelete()">YES</button>
+          </div>
+      </div>
+  </div>
+</div>

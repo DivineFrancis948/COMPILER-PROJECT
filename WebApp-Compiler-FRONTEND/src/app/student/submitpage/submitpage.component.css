@@ -1,0 +1,87 @@
+.box {
+    display: flex;
+}
+
+.column {
+    /* flex: 1; */
+    height: 800px;
+}
+
+.left-column {
+    height: 800px;
+    width:50%;
+    height: auto;
+    color: black;
+
+
+    
+}
+
+.right-column {
+    height: auto;
+    width:50%;
+
+}
+
+.box1
+{
+    margin-left:5%;
+    margin-top:2%;
+}
+
+.details
+{
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.card {
+  height: 60px;
+  /* border: 1px solid red; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a grey shadow */
+  /* position: relative; */
+  padding: 20px;
+  margin-top: 15px; /* Use margin-top: 15px only once */
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+  .button-container {
+    bottom: 10px;
+    right: 10px;
+  }
+
+
+
+  .card-title {
+    color: black;
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+  
+
+  
+  .card-button {
+    position: absolute;
+    right: 6%;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: black;
+    border: 1px solid black;
+    border: none;
+    cursor: pointer;
+  }
+
+  .profilecard
+  {
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a grey shadow */
+  }
+
+  .heading
+  {
+    font-family: 'Times New Roman', Times, serif;
+  }

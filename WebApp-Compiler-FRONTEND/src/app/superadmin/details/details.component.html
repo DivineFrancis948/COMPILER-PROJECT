@@ -1,0 +1,187 @@
+<app-sidebar></app-sidebar>
+<!-- search -->
+<div class="card text-center mx-auto mt-3" >
+  <div class="card-header text-white">
+      <h3 class="card-title" >
+          <i class="fas fa-user mr-2 "></i><span>User Search</span>
+      </h3>
+
+  </div>
+  <div class="card-body">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="form-group">
+                  <!-- <label for="userName">User Name</label> -->
+                  <input type="text" class="form-control" id="userName" placeholder="Enter User Name" name="userName">
+              </div>
+              <div class="form-group">
+                  <!-- <label for="PhoneNumber">Phone Number</label> -->
+                  <input type="number" class="form-control" id="phoneNumber" placeholder="Enter Phone Number" name="PhoneNumber">
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="form-group">
+                  <!-- <label for="fullname">Full Name</label> -->
+                  <input type="text" class="form-control" id="fullname" placeholder="Enter Name" name="fullname">
+              </div>
+              <div class="form-group">
+                <!-- <label for="email">User Email</label> -->
+                <input type="text" class="form-control" id="email" placeholder="Enter User Email" name="email">
+            </div>
+ 
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <!-- <label for="userType">User Type</label> -->
+              <select class="form-control" id="userType" name="userType">
+                  <option value="" selected>Select User Type</option>
+                  <option value="STUDENT">Student</option>
+                  <option value="QUESTIONNAIRE">questionnaire</option>
+                  <option value="ADMIN">Admin</option>
+              </select>
+          </div>
+            <div class="form-group">
+                <!-- <label for="idStatus">Status</label> -->
+                <select class="form-control" id="idStatus" name="idStatus">
+                    <option value="" selected>Select Status</option>
+                    <option value="PROCESSD">Processed</option>
+                    <option value="VERIFIED">Verified</option>
+                    <option value="DELETED">Deleted</option>
+                </select>
+            </div>
+        </div>
+
+      </div>
+  </div>
+</div>
+<!-- /.card-body -->
+<div class="card-footer text-center">
+  <button type="button" class="btn action-btn mx-2 clear-btn" style="margin-right: 10px; font-weight: bolder;" (click)="clear()">
+      CLEAR
+  </button>
+  <button type="button" class="btn action-btn mx-2 search-btns"  (click)="search()">
+      SEARCH
+  </button>
+</div>
+
+
+<hr class="custom-hr" >
+<!-- search -->
+<div class="container mt-4" style="margin-left: 10%;">
+    <div class="row mb-2">
+        <div class="col-md-12">
+          <!-- /// -->
+          <div class="bs-example custom-navbar">
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link custom-link active" style="font-size: large; font-weight: bold;" (click)="refreshByStatus('')">
+                  ALL:{{ iTotalDisplayRecords }}
+                </a>
+              </li>
+              <div class="vertical-line"></div>
+              <li class="nav-item">
+                <a class="nav-link custom-link" (click)="refreshByStatus('PROCESSD')">
+                  PROCESSED
+                  <span class="badge badge-warning ipsh-badge-pending">
+                    {{ statusCountList.processd }}
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-link" (click)="refreshByStatus('VERIFIED')">
+                  VERIFIED
+                  <span class="badge badge-dark ipsh-badge-approve">
+                    {{ statusCountList.verified }}
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-link" (click)="refreshByStatus('DELETED')">
+                  DELETED
+                  <span class="badge badge-danger ipsh-badge-delete">
+                    {{ statusCountList.deleted }}
+                  </span>
+                </a>
+              </li>
+              <div class="vertical-line"></div>
+              <li class="nav-item">
+                <a class="nav-link custom-link" (click)="refreshByUserType('STUDENT')">
+                  STUDENT
+                  <span class="badge badge-danger ipsh-badge-delete" style="background-color: rgb(243, 70, 17);">
+                    {{ statusCountList.student }}
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-link" (click)="refreshByUserType('QUESTIONNAIRE')">
+                  QUESTIONNAIRE
+                  <span class="badge badge-danger ipsh-badge-delete" style="background-color: rgb(9, 227, 230);">
+                    {{ statusCountList.questionnaire }}
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-link" (click)="refreshByUserType('ADMIN')" >
+                  ADMIN
+                  <span class="badge badge-danger ipsh-badge-delete" style="background-color: rgb(53, 44, 225)" >
+                    {{ statusCountList.admin }}
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- // -->
+        </div>
+    </div>
+ <div class="container mt-4">
+    <div class="table-responsive">
+        <table id="userList"
+            class="table table-bordered table-hover dataTable responsive nowrap ipsh-grid">
+            <thead id="id-table-head">
+                <tr>
+                    <th *ngFor="let head of initialHead">{{head}}</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <!-- /.table-responsive -->
+</div>
+
+<br>
+
+<div class="card-footer clearfix">
+
+  <button type="button" class="btn  action-btns action-btn float-right m-2 " (click)="goToVerifyPage()">
+
+    {{ 'VERIFY'}}
+  </button>
+  <button type="button" class="btn  action-btns action-btn float-right m-2 " (click)="goToUpdatePage()">
+
+    {{ 'UPDATE'}}
+  </button>
+  <button type="button" class="btn action-btns action-btn float-right m-2 " (click)="goToSetAdminPage()">
+
+    {{ 'Set As  Admin' }}
+  </button>
+  <button type="button" class="btn action-btn float-right m-2 delete-btn"  (click)="deleteUser()">
+
+    {{ 'DELETE' }}
+  </button>
+  <button type="button" class="btn action-btn float-right m-2 upload-btn"  (click)="uploadUsers()">
+
+    {{ 'UPLOAD' }}
+  </button>
+  <button type="button" class="btn action-btn float-right m-2 upload-btn"  (click)="excel()">
+
+    {{ 'DOWNLOAD EXECEL' }}
+  </button>
+  <button type="button" class="btn action-btn float-right m-2 upload-btn"  (click)="pdf()">
+
+    {{ 'DOWNLOAD PDF' }}
+  </button>
+
+  <br>
+</div>
