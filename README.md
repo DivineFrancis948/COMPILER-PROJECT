@@ -47,7 +47,7 @@ SolveMe is a comprehensive recruitment platform designed to help companies strea
 Use your favorite IDE to update the maven project and run the SpringBoot Application.
 
 
-###Frontend Setup
+### Frontend Setup
 
 1. **Navigate to the frontend directory:**
    ```bash
