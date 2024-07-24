@@ -1,0 +1,6 @@
+version: '3'
+services:
+  divine-av-service:
+    image: divine-av
+    command: ["clamscan", "--remove", "--recursive", "--infected", "--no-summary", "/app1"]
+ 
