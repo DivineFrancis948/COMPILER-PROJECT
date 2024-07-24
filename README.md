@@ -62,3 +62,8 @@ Use your favorite IDE to update the maven project and run the SpringBoot Applica
 3. **Run Frontend:**
    ```bash
    ng serve
+
+### Contact
+**Divine Francis** - divinefrancis948@gmail.com
+
+**Project Link**: 
