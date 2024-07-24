@@ -9,6 +9,7 @@ SolveMe is a comprehensive recruitment platform designed to help companies strea
 - **User Management:** Allows management of candidates taking the assessments.
 - **Result Analysis:** Provides detailed analysis of candidates' performance.
 - **Security:** The result submitted by the user is first analyzed by antivirus software in docker for malicious activity, including any generated executable files.
+- **Supported Languages:** C,C++,Java
 
 ## Technologies Used
 
