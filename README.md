@@ -26,6 +26,7 @@ SolveMe is a comprehensive recruitment platform designed to help companies strea
 - JDK 11 or higher
 - Node.js and Angular CLI
 - MySQL
+- Docker
 
 ### Backend Setup
 
