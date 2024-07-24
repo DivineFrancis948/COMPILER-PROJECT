@@ -8,6 +8,7 @@ SolveMe is a comprehensive recruitment platform designed to help companies strea
 - **Scalable Backend:** The backend endpoint can handle more than 200 requests at once, ensuring smooth operation even during peak times.
 - **User Management:** Allows management of candidates taking the assessments.
 - **Result Analysis:** Provides detailed analysis of candidates' performance.
+- **Security:** The result submitted by the user is first analyzed by antivirus software in docker for malicious activity, including any generated executable files.
 
 ## Technologies Used
 
@@ -15,7 +16,7 @@ SolveMe is a comprehensive recruitment platform designed to help companies strea
 - **Frontend:** Angular
 - **Database:** MySQL
 - **Authentication:** JWT
-- **Others:** HTML, CSS, REST APIs
+- **Others:** HTML, CSS, REST APIs, Docker
 
 ## Installation
 
@@ -59,10 +60,3 @@ Use your favorite IDE to update the maven project and run the SpringBoot Applica
 3. **Run Frontend:**
    ```bash
    ng serve
-
-
-
-
-
-
-   
