@@ -30,4 +30,39 @@ SolveMe is a comprehensive recruitment platform designed to help companies strea
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/divinefrancis948/COMPILER-PROJECT.git
-   cd SolveMe/backend
+   cd COMPILER-PROJECT/WebApp-Compiler-Backend
+
+2. **Configure the database:**
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/your_databasespring.datasource.username=your_username
+   spring.datasource.password=your_password
+   spring.jpa.hibernate.ddl-auto=update
+   spring.jpa.show-sql=true
+
+3. **Build and run the backend:**
+   ```bash
+   ./mvnw clean install
+   ./mvnw spring-boot:run
+
+Use your favorite IDE to update the maven project and run the SpringBoot Application.
+
+
+###Frontend Setup
+
+1. **Navigate to the frontend directory:**
+   ```bash
+   cd COMPILER-PROJECT/WebApp-Compiler-Frontend
+
+2. **Install dependencies:**
+      ```bash
+      npm i
+3. **Run Frontend:**
+   ```bash
+   ng serve
+
+
+
+
+
+
+   
